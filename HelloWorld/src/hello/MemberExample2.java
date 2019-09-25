@@ -57,9 +57,9 @@ public class MemberExample2 {
 				isId = false;
 				isPw = false;
 			}
-			} if (isId==true && isPw ==true)
+			} if (isId==true && isPw ==true)//=(isId && isPw)
 				System.out.println("이름은: "+ name +", 나이는: "+age);
-			else if (isId == true && isPw == false)					
+			else if (isId == true && isPw == false)//=(isId && !isPw)					
 				System.out.println("패스워드를 잘못 입력하셨습니다.");
 			else if (isId == false && isPw == false) {
 				System.out.println("존재하지 않는 ID입니다.");

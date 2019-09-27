@@ -31,7 +31,7 @@ public class BoardProc {
 	public void writeBoard() {
 		System.out.println("글작성.");
 		System.out.println("게시글번호입력:");
-		int boardNo = sc.nextInt();
+		int boardNo = sc.nextInt(); sc.nextLine();
 		System.out.println("제목을 입력하세요.");
 		String title = sc.nextLine();
 		System.out.println("내용을 입력하세요.");

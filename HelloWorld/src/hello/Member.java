@@ -24,6 +24,10 @@ public class Member {
 		
 	}
 
+	public Member(int sNumber, String sName, int s1, int s2, int s3) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getName() {
 		return name;
 	}

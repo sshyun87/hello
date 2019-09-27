@@ -36,6 +36,11 @@ public class Board {
 	public void setWriter(String writer) {
 		this.writer = writer;
 	}
+	@Override
+	public String toString() {
+		return "Board [boardNo=" + boardNo + ", title=" + title + ", contents=" + contents + ", writer=" + writer + "]";
+	}
+	
 	
 
 }

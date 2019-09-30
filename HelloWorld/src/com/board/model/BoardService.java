@@ -11,3 +11,4 @@ public interface BoardService {
 	public void deleteBoard(int boardNo, Board[] boards);
 
 }
+	public void updateBoard(com.board.model.Board board, com.board.model.Board[] boardAry);

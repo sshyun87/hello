@@ -10,27 +10,34 @@ public class BoardProc {
 	Scanner sc = new Scanner(System.in);
 	Board[] boardAry = new Board[10];
 	BoardService service = new BoardServiceImpl();
+	private boolean menu;
 	
 	public void execute() {
 		while (true) {
 			System.out.println("메뉴선택하세요.");
 			System.out.println("1.작성 2.단건조회 3.전체조회 4.변경 9.종료");
+			try {
 			int menu = sc.nextInt();
-			sc.nextLine();
-			if (menu == 1) {
-				writeBoard();
-			} else if (menu == 2) {
-				getBoard();
-			} else if (menu == 3) {
-				getBoardList();
-			} else if (menu == 4) {
-				updateBoard();
-			} else if (menu == 9) {
-				System.out.println("프로그램을 종료합니다.");
-				break;
+			}catch(Exception e) {
+				System.out.println("정상적인 메뉴 선택 해주세요.");
+				menu = sc.hasNextInt();
+				sc.nextLine();
+//				e.printStackTrace();
 			}
+//			sc.nextLine(); 
+//			if (menu == 1) {
+//				writeBoard();
+//			} else if (menu == 2) {
+//				getBoard();
+//			} else if (menu == 3) {
+//				getBoardList();
+//			} else if (menu == 4) {
+//				updateBoard();
+//			} else if (menu == 9) {
+//				System.out.println("프로그램을 종료합니다.");
+//				break;
+//			}
 		}
-		System.out.println("프로그램 종료.");
 	}
 	public void updateBoard() {
 		System.out.println("변경할 글번호:");
@@ -45,7 +52,8 @@ public class BoardProc {
 	public void writeBoard() {
 		System.out.println("글작성.");
 		System.out.println("게시글번호입력:");
-		int boardNo = sc.nextInt(); sc.nextLine();
+		int boardNo = sc.nextInt(); 
+		sc.nextLine();
 		System.out.println("제목을 입력하세요.");
 		String title = sc.nextLine();
 		System.out.println("내용을 입력하세요.");

@@ -38,6 +38,7 @@ public class CourseExample {
 		Course<Student> courseStudent = new Course<>("학생 과정", 5);
 		Course<HighStudent> courseHigh = new Course<>("고등학생 과정", 5);
 		return courseWorker;
+	}
 		
 	public static void registerWorker(Course<? super Worker> course) {	
 	    System.out.println("과정명: "+course.getName()+", 수강생: "+ Arrays.toString(course.getStudents()));

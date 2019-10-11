@@ -76,6 +76,18 @@ public class BoardProc {
 //
 //		}
 	}
+	
+	public void login_check(){
+		   while(true){
+		      System.out.println("id 입력.");
+		      String id = sc.nextLine();
+		      System.out.println("passwd 입력.");
+		      String passwd = sc.nextLine();
+		      
+		      if(id.equals("user1") && passwd.contentEquals("1234")) {
+		    	  
+		      }
+	
 
 	public void getBoard() {
 		System.out.println("한건조회.");

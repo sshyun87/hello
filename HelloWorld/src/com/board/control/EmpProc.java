@@ -21,15 +21,14 @@ public class EmpProc {
 	public void execute() {
 		while (true) {
 			System.out.println("메뉴선택하세요.");
-			System.out.println("1.작성 2.단건조회 3.전체조회 4.변경 9.종료");
+			System.out.println("1.작성 2.단건조회 3.전체조회 4.변경 5.삭제 9.종료");
 			int menu = 0;
 			try {
-				menu = sc.nextInt();
+				menu = sc.nextInt();//error 발생 가능한곳.
 			} catch (Exception e) {
 				System.out.println("정상적인 메뉴 선택 해주세요.");
 				menu = sc.nextInt();
 				sc.nextLine();
-//				e.printStackTrace();
 			}
 			sc.nextLine();
 			if (menu == 1) {
@@ -40,11 +39,21 @@ public class EmpProc {
 				getBoardList();
 			} else if (menu == 4) {
 				updateBoard();
+			} else if (menu == 5) {
+				deleteBoard();
 			} else if (menu == 9) {
 				System.out.println("프로그램을 종료합니다.");
 				break;
 			}
 		}
+	}
+
+	private void deleteBoard() {
+		System.out.println("삭제할 번호 입력");
+		int empId = sc.nextInt();
+		service.deleteEmployee(empId);
+		
+		
 	}
 
 	public void updateBoard() {
@@ -54,7 +63,6 @@ public class EmpProc {
 		System.out.println("변경할 내용:");
 		String content = sc.nextLine();
 		Board board = new Board(boardNo, "", content, "");
-//		service.updateBoard(board, boardAry);
 
 	}
 
@@ -89,15 +97,10 @@ public class EmpProc {
 
 	public void getBoard() {
 		System.out.println("한건조회.");
-		System.out.println("조회할 번호를 입력: ");
-		int boardNo = sc.nextInt();
-//		Board board = service.getBoard(boardNo, boardAry);
-//		System.out.println(board);
-//		for (int i = 0; i < boardAry.length; i++) {
-//			if (boardAry != null && boardAry[i].getBoardNo() == boardNo) {
-//				System.out.println(boardAry[i].getTitle() + "," + boardAry[i].getContents());
-//			}
-//		}
+		System.out.println("조회할 사원번호를 입력: ");
+		int empNo = sc.nextInt();
+		Employee emp = service.getEmployee(empNo);
+		System.out.println(emp);
 
 	}
 
@@ -107,11 +110,5 @@ public class EmpProc {
 		for (Employee employee : employees) {
 			System.out.println(employee);
 		}
-
-//		for (int i = 0; i < boardAry.length; i++) {
-//			if (boardAry[i] != null) {
-//				System.out.println(boardAry[i].getTitle() + "," + boardAry[i]);
-//			}
-//		}
 	}
 }

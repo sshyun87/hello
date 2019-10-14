@@ -18,7 +18,7 @@ public class BoardDBProc {
 		loginCheck();
 		while (true) {
 			int menu = 0;
-			System.out.println("1.게시글 작성 2.게시글 리스트 3.글조회 4.글내용 수정 9.종료");
+			System.out.println("1.게시글 작성 2.게시글 리스트 3.글조회 4.글내용 수정 5.글삭제 9.종료");
 			menu = sc.nextInt(); sc.nextLine();
 			if (menu == 1) {
 				writeBoard();
@@ -28,10 +28,22 @@ public class BoardDBProc {
 				getBoard();
 			}else if(menu == 4) {
 				updateBoard();
-		}
+			}else if(menu == 5) {
+				deleteBoard();
+			}
 	}
 	}
 	
+	private void deleteBoard() {
+		System.out.println("삭제할 글번호 입력: ");
+		int boardNo = sc.nextInt(); sc.nextLine();
+		BoardDB board = new BoardDB();
+		board.setBoardNo(boardNo);
+		board.setWriter(loginId);
+		
+		service.deleteBoard(board);
+	}
+
 	public void updateBoard() {
 		System.out.println("변경할 글 번호: ");
 		int boardNo = sc.nextInt(); sc.nextLine();
@@ -43,6 +55,7 @@ public class BoardDBProc {
 		board.setBoardNo(boardNo);
 		board.setTitle(title);
 		board.setContent(content);
+		board.setWriter(loginId);
 		
 		service.updateBoard(board);
 		}

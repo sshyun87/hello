@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+<style>
+p{
+color: red;
+font-weight:bold;
+font-size:12pt;
+}
+</style>
+</head>
+<body>
+<p>(주)예담직업전문학교 일반회원가입</p>
+<li><b>&nbsp;이름, 생년월일, 성별, 이메일</b>은 본인확인 및 교육확인을 위해 사용됩니다.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    신분증에 기재된 정보와 하나의 메일로 통일해서 적어주십시오.</li><p>
+<li><b>&nbsp;이름, 생년월일, 성별, 이메일</b>과 훈련정보를 대조해 교육중이나 수료생의 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    마이페이지의 정보변경에서 바로 수료/수강생회원으로 전환이 가능합니다.</li><p>
+<li>&nbsp;회원가입후 마이페이지에서 회원탈퇴가 가능하며, 온라인상에서 정보는 보관되지 않습니다.</li>
+<p>
+<form>
+<table border="1" width="50%" rules="all">
+<tr>
+<td align="center" width="20%" bgcolor="#F2F2F2"><b>이름</b><font color="red">*</font></td>
+<td><input type="text"></td>
+</tr>
+<tr>
+<td align="center" width="20%" bgcolor="#F2F2F2"><b>아이디</b><font color="red">*</font></td>
+<td><input type="text">&nbsp;<b>ID는 영문자와 숫자만 사용할 수 있습니다.</b></td>
+</tr>
+<tr>
+<td align="center" width="20%" bgcolor="#F2F2F2"><b>비밀번호</b><font color="red">*</font></td>
+<td><input type="text"></td>
+</tr>
+<tr>
+<td align="center" width="20%" bgcolor="#F2F2F2"><b>비밀번호확인</b><font color="red">*</font></td>
+<td><input type="text"></td>
+</tr>
+<td align="center" width="20%" bgcolor="#F2F2F2"><b>생년월일</b><font color="red">*</font></td>
+<td><p><select name="year">
+<option>년도</option>
+<option>1986</option>
+<option>1987</option>
+<option>1988</option>
+<option>1989</option>
+</select>
+<select name="mon">
+<option>월</option>
+<option>3월</option>
+<option>4월</option>
+<option>5월</option>
+</select>
+<select name="day">
+<option>일</option>
+<option>1일</option>
+<option>2일</option>
+<option>3일</option>
+</select>&nbsp;<font color="#E6E6E6" font size="2pt">*신분증에 기재된 성명, 생년월일, 성별을 입력해 주세요.</font></b>
+</td>
+<tr>
+<td align="center" width="20%" bgcolor="#F2F2F2"><b>성별</b><font color="red">*</font></td>
+<td><p style="color:black"><input type="radio" name="gender" value="man" id="man"><label for=man">남</label>&nbsp;
+<input type="radio" name="gender" value="woman" id="woman"><label for="woman">여</label>
+</tr>
+<tr>
+<td align="center" width="20%" bgcolor="#F2F2F2"><b>이메일</b><font color="red">*</font></td>
+<td><input type="text" size="50">&nbsp;<font color="#E6E6E6" font size="2pt"><b>*본인확인 및 아이디/비번찾기에 사용됩니다.</font></b></td>
+</tr>
+<td align="center" width="20%" bgcolor="#F2F2F2"><b>전화번호</b><font color="blue">*</font></td>
+<td><p style="color:black"><select name="num">
+<option>선택</option>
+<option>053</option>
+<option>02</option>
+</select>
+&nbsp;-&nbsp;<input type="text">&nbsp;-&nbsp;
+<input type="text">
+&nbsp;<font color="blue" font size="2pt">*전화 또는 휴대폰번호 중 택1은 필수사항입니다.</font></b>
+</td>
+<tr>
+<td align="center" width="20%" bgcolor="#F2F2F2"><b>휴대폰번호</b><font color="blue">*</font></td>
+<td><p style="color:black"><select name="num">
+<option>선택</option>
+<option>011</option>
+<option>010</option>
+</select>
+&nbsp;-&nbsp;<input type="text">
+&nbsp;-&nbsp;<input type="text">
+</td>
+<tr>
+<td align="center" width="20%" bgcolor="#F2F2F2"><b>주소</b><font color="red">*</font></td>
+<td><input type="text" size="80">&nbsp;</td>
+</tr>
+<tr>
+<td align="center" width="20%" bgcolor="#F2F2F2"><b>상세주소</b><font color="red">*</font></td>
+<td><input type="text" size="80">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2" align="center"><input type="submit" font-size=20pt vertical-align="bottom" value="일반회원가입"></td>
+</tr>
+</table>
+</body>
+</html>

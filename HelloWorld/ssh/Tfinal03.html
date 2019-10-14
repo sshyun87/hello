@@ -3,15 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <title>구구단</title>
+<style>
+table {
+border-collapse: collapse;
+}
+</style>
 <script>
-document.write("<table border='2px' align='center' frame='box'>");
+document.write("<table border='3' align='center'><tr>");
 
  for (i=1; i<10; i++){
-   document.write("<tr>"+"<td align='center'><b>"+i+"단"+"</b></td>");  
+   document.write("<tr>");
+   document.write("<th>"+i+"단");
    for (k=1; k<10; k++){
 	   document.write("<td>"+i+"*"+k+"="+(i*k)+"</td>");
    }document.write("</tr>");
  }
+ 
+
 </script>
 </head>
 <body>

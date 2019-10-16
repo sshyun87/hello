@@ -12,3 +12,4 @@ insert into user_login('user4', '1234', 'sihyun');
 insert into user_login('user2', '1234', 'sahyun');
 insert into user_login('user3', '1234', 'sehyun');
 
+ create SEQUENCE employee_seq;

@@ -59,6 +59,6 @@ public class PredicateExample {
 		avg = avg((t)->{
 			return t.getSex().contentEquals("여자");
 		});
-		System.out.println("여자평균: " + avg);
+		System.out.println("여자평균: " + avg );
 	}
 }
